@@ -17,13 +17,10 @@ namespace WebAppFirst.Models
     {
         public int LoginId { get; set; }
         [Required(ErrorMessage = "Anna käyttäjätunnus!")]
-
         public string UserName { get; set; }
         [DataType(DataType.Password)]
         [Required(ErrorMessage = "Anna salasana!")]
-
         public string PassWord { get; set; }
-
         public string LoginErrorMessage { get; set; }
     }
 }

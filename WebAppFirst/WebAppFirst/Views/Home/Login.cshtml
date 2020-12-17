@@ -12,7 +12,7 @@
     @Html.AntiForgeryToken()
     
 <div class="form-horizontal">
-    <h4>Logins</h4>
+    <h4>Kirjaudu sivustolle</h4>
     <hr />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     @Html.HiddenFor(model => model.LoginId)
@@ -40,13 +40,13 @@
             @Html.ValidationMessageFor(model => model.LoginErrorMessage, "", new { @class = "text-danger" })
         </div>
     </div>
-    <label class="field-validation-error">
+    <label class="text-danger">
         @Html.DisplayFor(model => model.LoginErrorMessage)
     </label>
 
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Log" class="btn btn-default" />
+            <input type="submit" value="Login" class="btn btn-default" />
         </div>
     </div>
 </div>

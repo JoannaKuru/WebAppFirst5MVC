@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="northwindModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="northwindModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Categories">
           <Key>
             <PropertyRef Name="CategoryID" />
@@ -50,16 +50,6 @@
           <Property Name="Country" Type="nvarchar" MaxLength="15" />
           <Property Name="Phone" Type="nvarchar" MaxLength="24" />
           <Property Name="Fax" Type="nvarchar" MaxLength="24" />
-        </EntityType>
-        <EntityType Name="Documentation">
-          <Key>
-            <PropertyRef Name="DocumentationID" />
-          </Key>
-          <Property Name="DocumentationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="AvailableRoute" Type="nvarchar" MaxLength="200" />
-          <Property Name="Method" Type="nvarchar" MaxLength="10" />
-          <Property Name="Description" Type="nvarchar" MaxLength="2000" />
-          <Property Name="Keycode" Type="nvarchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="Employees">
           <Key>
@@ -336,7 +326,6 @@
           <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Contacts" EntityType="Self.Contacts" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Documentation" EntityType="Self.Documentation" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EmployeeTerritories" EntityType="Self.EmployeeTerritories" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Logins" EntityType="Self.Logins" Schema="dbo" store:Type="Tables" />
@@ -404,7 +393,6 @@
           <EntitySet Name="Categories" EntityType="northwindModel.Categories" />
           <EntitySet Name="Contacts" EntityType="northwindModel.Contacts" />
           <EntitySet Name="Customers" EntityType="northwindModel.Customers" />
-          <EntitySet Name="Documentation" EntityType="northwindModel.Documentation" />
           <EntitySet Name="Employees" EntityType="northwindModel.Employees" />
           <EntitySet Name="Logins" EntityType="northwindModel.Logins" />
           <EntitySet Name="Order_Details" EntityType="northwindModel.Order_Details" />
@@ -506,16 +494,6 @@
           <Property Name="Phone" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
           <Property Name="Fax" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Orders" Relationship="northwindModel.FK_Orders_Customers" FromRole="Customers" ToRole="Orders" />
-        </EntityType>
-        <EntityType Name="Documentation">
-          <Key>
-            <PropertyRef Name="DocumentationID" />
-          </Key>
-          <Property Name="DocumentationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="AvailableRoute" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Method" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
-          <Property Name="Keycode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Employees">
           <Key>
@@ -780,7 +758,7 @@
           <End Type="northwindModel.Employees" Role="Employees" Multiplicity="*" />
           <End Type="northwindModel.Territories" Role="Territories" Multiplicity="*" />
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -832,17 +810,6 @@
                 <ScalarProperty Name="ContactName" ColumnName="ContactName" />
                 <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
                 <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Documentation">
-            <EntityTypeMapping TypeName="northwindModel.Documentation">
-              <MappingFragment StoreEntitySet="Documentation">
-                <ScalarProperty Name="Keycode" ColumnName="Keycode" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="Method" ColumnName="Method" />
-                <ScalarProperty Name="AvailableRoute" ColumnName="AvailableRoute" />
-                <ScalarProperty Name="DocumentationID" ColumnName="DocumentationID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

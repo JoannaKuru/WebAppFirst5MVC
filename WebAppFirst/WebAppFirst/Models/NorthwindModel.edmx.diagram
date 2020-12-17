@@ -4,19 +4,18 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="037c50de67b24a208aba386737f3f1ee" Name="Diagram1" ZoomLevel="55">
-        <EntityTypeShape EntityType="northwindModel.Categories" Width="1.5" PointX="3" PointY="14.375" />
+      <Diagram DiagramId="037c50de67b24a208aba386737f3f1ee" Name="Diagram1" ZoomLevel="59">
+        <EntityTypeShape EntityType="northwindModel.Categories" Width="1.5" PointX="3" PointY="18.625" />
         <EntityTypeShape EntityType="northwindModel.Contacts" Width="1.5" PointX="7.75" PointY="0.75" />
         <EntityTypeShape EntityType="northwindModel.Customers" Width="1.5" PointX="3" PointY="9.875" />
-        <EntityTypeShape EntityType="northwindModel.Documentation" Width="1.5" PointX="9.75" PointY="0.75" />
         <EntityTypeShape EntityType="northwindModel.Employees" Width="1.5" PointX="0.75" PointY="7.125" />
-        <EntityTypeShape EntityType="northwindModel.Logins" Width="1.5" PointX="9.75" PointY="3.75" />
+        <EntityTypeShape EntityType="northwindModel.Logins" Width="1.5" PointX="9.75" PointY="0.75" />
         <EntityTypeShape EntityType="northwindModel.Order_Details" Width="1.5" PointX="7.5" PointY="6.375" />
         <EntityTypeShape EntityType="northwindModel.Orders" Width="1.5" PointX="5.25" PointY="5.25" />
         <EntityTypeShape EntityType="northwindModel.Products" Width="1.5" PointX="5.25" PointY="15.625" />
         <EntityTypeShape EntityType="northwindModel.Region" Width="1.5" PointX="0.75" PointY="3.875" />
         <EntityTypeShape EntityType="northwindModel.Shippers" Width="1.5" PointX="3" PointY="6.375" />
-        <EntityTypeShape EntityType="northwindModel.Suppliers" Width="1.5" PointX="3" PointY="17.125" />
+        <EntityTypeShape EntityType="northwindModel.Suppliers" Width="1.5" PointX="3" PointY="14.375" />
         <EntityTypeShape EntityType="northwindModel.Territories" Width="1.5" PointX="3" PointY="2.75" />
         <AssociationConnector Association="northwindModel.FK_Products_Categories" />
         <AssociationConnector Association="northwindModel.FK_Orders_Customers" />

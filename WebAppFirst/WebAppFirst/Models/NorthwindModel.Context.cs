@@ -28,7 +28,6 @@ namespace WebAppFirst.Models
         public virtual DbSet<Categories> Categories { get; set; }
         public virtual DbSet<Contacts> Contacts { get; set; }
         public virtual DbSet<Customers> Customers { get; set; }
-        public virtual DbSet<Documentation> Documentation { get; set; }
         public virtual DbSet<Employees> Employees { get; set; }
         public virtual DbSet<Logins> Logins { get; set; }
         public virtual DbSet<Order_Details> Order_Details { get; set; }
